@@ -1,0 +1,177 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>宝马专卖系统</title>
+    <script src="~/js/jquery-3.3.1.js"></script>
+    <link href="~/Jm/layui-v2.5.6/layui/css/layui.css" rel="stylesheet" />
+    <link href="~/layui-v2.5.6/layui/css/layui.css" rel="stylesheet" />
+    <script>
+        function TZYM(type) {
+            //src拼接跳转页面 要跳转那个页面 请参考员工签到对应的字母 /控制器名字/方法名 列如‘/Interface/Add'
+            switch (type) {
+                case "a":
+                    document.getElementById("tz").src = '/Interface/Show';
+                    break;
+                case "b":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "c":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "e":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "f":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "g":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "h":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "i":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "q":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "l":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "m":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "n":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "o":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "you":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "sq":
+                    document.getElementById("tz").src = '';
+                    break;
+                case "yy":
+                    document.getElementById("tz").src = '';
+                default:
+            }
+        }
+
+        function resize(obj) {
+
+            var ifrm = obj.contentWindow.document.body;
+
+            ifrm.style.cssText = "margin:0px;padding:0px";
+
+            overflow: hidden;
+
+            var div = document.createElement("img");
+
+            div.src = obj.src;
+
+            obj.height = div.height;
+
+            obj.width = div.width;
+
+        }
+    </script>
+</head>
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo"></div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+            </ul>
+            <ul class="layui-nav layui-layout-admin">
+                <li>
+                    <a></a>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;" id="a_uName">
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/Inter/Xgmm"></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="/Inter/UserLogin">退出</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">人力/考勤管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:TZYM('a');">我淦</a></dd>
+                            <dd><a href="javascript:TZYM('o');"></a></dd>
+                            <dd><a href="javascript:TZYM('b');"></a></dd>
+                            <dd><a href="javascript:TZYM('c');"></a></dd>
+                            <dd><a href="javascript:TZYM('e');"></a></dd>
+                            <dd><a href="javascript:TZYM('f');"></a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">业绩管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:TZYM('g');"></a></dd>
+                            <dd><a href="javascript:TZYM('h');"></a></dd>
+                            <dd><a href="javascript:TZYM('i');"></a></dd>
+                            <dd><a href="javascript:TZYM('q');"></a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">财务管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:TZYM('l');"></a></dd>
+                            <dd><a href="javascript:TZYM('m');"></a></dd>
+                            <dd><a href="javascript:TZYM('n');"></a></dd>
+                        </dl>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <iframe id="tz" src="/Img/003.png" style="height:100%;width:100%;" name="main_self_frame" frameborder="0" class="layadmin-iframe">
+            </iframe>
+
+        </div>
+
+        <div class="layui-footer" style="padding-top:50px">
+            <!-- 底部固定区域 -->
+        </div>
+    </div>
+
+    <script src="~/Jm/layui-v2.5.6/layui/layui.js"></script>
+    <script src="~/layui-v2.5.6/layui/layui.all.js"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function () {
+            var element = layui.element;
+
+        });
+
+
+    </script>
+</body>
+</html>
